@@ -5,7 +5,7 @@ from sqlalchemy.orm import sessionmaker
 from puppies import Base, Shelter, Puppy
 
 
-engine = create_engine('sqlite:///puppyshelter.db')
+engine = create_engine('sqlite:///puppies.db')
 Base.metadata.bind=engine
 Session = sessionmaker(bind=engine)
 session = Session()
