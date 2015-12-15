@@ -10,3 +10,4 @@ from puppies import Base, Shelter, Puppy
 
 session = Session()
 
+dogs = session.query(Puppy).all().order_by(Puppy.name)
