@@ -6,3 +6,4 @@ engine = create_engine('sqlite:///exercise2', echo=True)
 from sqlalchemy.orm import sessionmaker
 Session = sessionmaker(bind=engine)
 
+session = Session()
