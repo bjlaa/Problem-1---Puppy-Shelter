@@ -10,5 +10,5 @@ Base.metadata.bind=engine
 Session = sessionmaker(bind=engine)
 session = Session()
 
-dogs = session.query(Puppy).all()
+dogs = session.query(Puppy.name).order_by(Puppy.name).all()
 print dogs
