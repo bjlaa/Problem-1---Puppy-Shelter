@@ -1,4 +1,5 @@
 import sqlalchemy
+import datetime
 
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
@@ -15,5 +16,9 @@ dogs = session.query(Puppy.name).order_by(Puppy.name).all()
 print dogs
 
 #2. Query all of the puppies that are less than 6 months old organized by the youngest first
-youngDogs = session.query(Puppy.dateOfBirth).filter(Puppy.dateOfBirth > 180)
-print youngDogs
+#youngDogs = session.query(Puppy.dateOfBirth).filter(Puppy.dateOfBirth > 180)
+#print youngDogs
+
+#3. Query all puppies by ascending weight
+weightDogs = session.query(Puppy.weight).order_by(Puppy.weight).all()
+print weightDogs
